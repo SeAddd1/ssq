@@ -1,0 +1,46 @@
+ /*
+SELECT 
+knjiga.stanje,
+knjiga.Naziv_knjige
+ FROM biblioteka.knjiga
+where 
+stanje>20;*/
+/*
+*prikazati sve knjige kojih ima 20 i visenna sranju
+prikazat nazive knjiga i datum posudbe za sve knjige koje nisu vraćene 
+prikazati nazive knjiga imena i prezimena ucenika za sve knjige koje nisu vracene
+prikazat imena i prezimena svih ucenika kojji su posudili knjigu dervis i smrt
+*/
+/*
+SELECT 
+knjiga.Naziv_knjige,
+posudba.datum_posudbe,
+posudba.datum_vracanja
+ FROM 
+ knjiga inner join posudba on knjiga.knjiga_id = posudba.posudba_id
+where 
+datum_vracanja is null
+*/
+/*
+SELECT 
+knjiga.Naziv_knjige,
+posudba.datum_posudbe,
+posudba.datum_vracanja,
+ucenici.Ime_ucenika,
+ucenici.Prezime_ucenika
+ FROM 
+ knjiga inner join posudba on knjiga.Knjiga_id = posudba.Knjiga_id inner join ucenici on ucenici.Ucenik_id = posudba.Ucenik_id
+where 
+datum_vracanja is null
+*/
+/*
+SELECT 
+ucenici.Ime_ucenika,
+ucenici.Prezime_ucenika,
+knjiga.Naziv_knjige
+ FROM 
+ knjiga inner join posudba on knjiga.Knjiga_id = posudba.Knjiga_id inner join ucenici on ucenici.Ucenik_id = posudba.Ucenik_id
+where 
+Naziv_knjige='Dervis i smrt'
+*/
+ 
